@@ -1,6 +1,6 @@
 /* Fondo negro profesional */
 html, body {
-    background-color: #0d0d0d; /* negro suave estilo YouTube */
+    background-color: #201e1e; /* negro suave estilo YouTube */
     margin: 0;
     padding: 0;
     height: 100%;
@@ -21,4 +21,43 @@ h1 {
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* MENU SUPERIOR */
+.menu {
+    width: 100%;
+    background-color: #000; /* negro más oscuro */
+    padding: 15px 0;
+    position: fixed; /* se queda arriba */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: gold; /* combina con tu logo */
+    text-shadow: 0 0 5px gold;
+}
+
+body {
+    padding-top: 70px; /* baja el contenido para que el menú no lo tape */
 }
