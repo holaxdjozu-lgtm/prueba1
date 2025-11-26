@@ -1,23 +1,28 @@
 /* Fondo negro profesional */
 html, body {
-    background-color: #201e1e; /* negro suave estilo YouTube */
+    background-color: #121212; /* negro suave estilo YouTube */
     margin: 0;
     padding: 0;
     height: 100%;
     color: #ffffff; /* texto blanco */
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    main {
+    flex: 1; /* ocupa todo el espacio disponible */
+}
 }
 
 /* Centrar primer título */
 h1 {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 20px; /* menos margen para que no baje demasiado */
     font-size: 2.5rem;
     font-weight: 600;
     color: #f5f5f5;
 }
 
-/* Opcional: suavizar el texto */
+/* Suavizar el texto */
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -25,39 +30,138 @@ body {
 
 
 
-/* MENU SUPERIOR */
-.menu {
-    width: 100%;
-    background-color: #000; /* negro más oscuro */
-    padding: 15px 0;
-    position: fixed; /* se queda arriba */
-    top: 0;
-    left: 0;
-    z-index: 1000;
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 20px;
+    margin-top: 50px;
 }
 
-.menu ul {
+.footer-section {
+    margin: 10px;
+    max-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: gold;
+}
+
+.footer-section p, .footer-section ul {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.footer-section ul {
     list-style: none;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin: 0;
     padding: 0;
 }
 
-.menu a {
-    text-decoration: none;
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
     color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: 0.3s;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.menu a:hover {
-    color: gold; /* combina con tu logo */
-    text-shadow: 0 0 5px gold;
+.footer-section ul li a:hover {
+    color: yellow;
+    text-shadow: 0 0 5px yellow;
 }
 
-body {
-    padding-top: 70px; /* baja el contenido para que el menú no lo tape */
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+
+
+/* Contenedor principal para texto e imágenes */
+.intro-section {
+    display: flex;               /* organiza texto e imágenes en fila */
+    align-items: flex-start;     /* alinea arriba */
+    gap: 30px;                   /* espacio entre texto e imágenes */
+    flex-wrap: wrap;             /* se acomoda en pantallas pequeñas */
+    margin: 20px;
+}
+
+/* Texto a la izquierda */
+.intro-text {
+    flex: 2;                     /* ocupa más espacio que las imágenes */
+}
+
+/* Imágenes a la derecha */
+.intro-images {
+    flex: 1;                     /* ocupa menos espacio */
+    display: flex;
+    flex-direction: column;      /* apila verticalmente */
+    gap: 15px;
+}
+
+/* Estilo de las imágenes */
+.intro-img {
+    width: 100%;
+    max-width: 250px;            /* tamaño máximo */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.intro-img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.videos-section {
+    margin: 40px 20px;
+}
+
+.videos-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-item {
+    flex: 1 1 300px; /* se adapta según pantalla */
+    max-width: 560px;
+    text-align: center;
+    color: #fff;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.video-item iframe:hover {
+    transform: scale(1.05);
+}
+
+.video-item p {
+    margin-top: 10px;
 }

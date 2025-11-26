@@ -1,0 +1,51 @@
+/* Menu estilo YouTube moderno */
+.navbar {
+    background-color: rgba(24, 24, 24, 0.95); /* fondo oscuro con opacidad */
+    padding: 8px 20px; /* menos padding para que quede más arriba */
+    position: sticky; /* siempre visible al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: 0.3s all;
+    position: relative;
+}
+
+/* Efecto "wao" al pasar el cursor */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+    background-color: yellow; /* color llamativo */
+    transition: width 0.3s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* subraya todo el enlace */
+}
+
+.navbar ul li a:hover {
+    color: yellow; /* cambia el texto a amarillo */
+    text-shadow: 0 0 8px yellow;
+    background-color: rgba(255,255,255,0.05); /* ligero efecto de fondo */
+}
