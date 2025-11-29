@@ -250,3 +250,331 @@ body {
 }
 
 
+
+
+
+
+.tipos-musica {
+    padding: 20px;
+}
+
+.tipos-musica h2 {
+    margin-bottom: 25px; 
+}
+
+.categoria {
+    margin-bottom: 30px;   /* separación entre secciones */
+}
+
+.categoria h3 {
+    margin-bottom: 10px;   /* separación entre subtítulo y texto */
+    font-size: 22px;
+}
+
+.categoria p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.categoria ul {
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- FORZAR ZIG ZAG --- */
+
+/* Todos los items alineados en fila */
+.item {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* El texto ocupa más espacio */
+.item .texto {
+    flex: 1 !important;
+}
+
+/* La imagen */
+.item img,
+.zig-img {
+    width: 280px !important;
+    height: auto !important;
+    border-radius: 10px;
+}
+
+/* El zigzag de verdad */
+.item.reverse {
+    flex-direction: row-reverse !important;
+}
+
+
+
+
+
+
+
+/* Contenedor flex para la lista y la imagen */
+.danza-flex {
+    display: flex;
+    align-items: flex-start; /* Alinea al inicio de la lista */
+    gap: 20px; /* Espacio entre lista e imagen */
+}
+
+/* Imagen de danza */
+.danza-flex img {
+    width: 350px; /* Ajusta tamaño */
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: zoom y sombra */
+.danza-flex img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+
+
+
+
+/*todo el estilo del texto */
+
+body {
+    text-align: left;
+    line-height: 1.6; /* Para que no se vea amontonado */
+}
+
+.intro-text, 
+.tipos-musica, 
+.categoria, 
+.videos-section, 
+footer {
+    text-align: left; /* Todo alineado a la izquierda */
+}
+.intro-text, .tipos-musica, .categoria, .videos-section {
+    max-width: 900px;
+    margin: 0 auto; /* Centra el bloque en la pantalla */
+}
+
+
+
+
+
+
+
+/* Sección de aprendizaje */
+.aprendizaje {
+    max-width: 900px;
+    margin: 40px auto; /* Centra la sección */
+    padding: 20px;
+    text-align: left;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.7;
+}
+
+/* Tip motivador */
+.tip-motivador {
+    font-size: 1.3rem; /* Letras más grandes */
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 5px solid #141212;
+    background: #030101;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+/* Hover: efecto de brillo azul/eléctrico */
+.tip-motivador:hover {
+    color: #00f0ff; /* Azul eléctrico */
+    text-shadow: 
+        0 0 5px #0f143a,
+        0 0 10px #e2f025,
+        0 0 20px #1216499c,
+        0 0 30px #0f0e4b,
+        0 0 40px #06053b;
+    cursor: pointer;
+}
+
+
+
+/*imagenes ultimas de intro*/
+
+.intro-images {
+    display: flex;              /* Poner las imágenes en fila */
+    flex-direction: row;        /* Forzar fila horizontal */
+    justify-content: center;    /* Centrar horizontalmente */
+    align-items: center;        /* Centrar verticalmente dentro del contenedor */
+    gap: 40px;                  /* Espacio entre imágenes */
+    margin-top: 30px;           /* Separación arriba */
+    flex-wrap: wrap;            /* Permite que bajen si la pantalla es muy pequeña */
+    width: 100%;                /* Asegura que el contenedor use todo el ancho */
+}
+
+/* Ajuste de cada imagen */
+.intro-images .intro-img {
+    width: 350px;               /* Tamaño grande */
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover opcional */
+.intro-images .intro-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*imagen de diferencias*/
+.img-container {
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    margin: 30px 0; /* espacio arriba y abajo */
+}
+
+.intro-img {
+    width: 80%; /* puedes ajustar el tamaño */
+    max-width: 700px; /* para que no se haga gigante en pantallas grandes */
+    border-radius: 15px; /* bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* sombra para darle profundidad */
+    transition: transform 0.3s ease; /* efecto hover */
+}
+
+.intro-img:hover {
+    transform: scale(1.05); /* al pasar el mouse se agranda un poquito */
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/*estilo de videos*/
+
+.videos-container {
+    display: flex;
+    justify-content: center; /* centra todos los videos */
+    gap: 50px; /* espacio entre los videos */
+    margin-top: 20px;
+    flex-wrap: wrap; /* si quieres que en pantallas muy pequeñas bajen */
+}
+
+.video-item {
+    flex: 1 1 560px; /* ancho flexible para que queden lado a lado */
+    max-width: 560px; /* no se hagan más grandes */
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+.video-wrapper iframe {
+    width: 100%; /* para que ocupe todo el ancho del video-item */
+    height: 315px;
+}
+
+/* Cards flotantes igual que antes */
+.video-card {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    width: 250px;
+    padding: 15px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.video-card.left {
+    right: 100%;
+    margin-right: 20px;
+}
+
+.video-card.right {
+    left: 100%;
+    margin-left: 20px;
+}
+
+.video-wrapper:hover .video-card {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+
+
+/*footer con nuevas cositas*/
+ .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin: 20px;
+    min-width: 200px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    color: #f2a500; /* color para resaltar títulos */
+}
+
+.footer p, 
+.footer li, 
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu li a:hover {
+    color: #f2a500; /* efecto hover */
+}

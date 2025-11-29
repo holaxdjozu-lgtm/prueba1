@@ -1,7 +1,7 @@
 /* Menu estilo YouTube moderno */
 .navbar {
     background-color: rgba(24, 24, 24, 0.95); /* fondo oscuro con opacidad */
-    padding: 8px 20px; /* menos padding para que quede más arriba */
+    padding: 15px 20px; /* menos padding para que quede más arriba */
     position: sticky; /* siempre visible al hacer scroll */
     top: 0;
     z-index: 1000;
@@ -11,7 +11,7 @@
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 40px;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -21,8 +21,9 @@
 .navbar ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-weight: 500;
-    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 12px 18px;
     border-radius: 5px;
     transition: 0.3s all;
     position: relative;
