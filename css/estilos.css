@@ -1044,7 +1044,6 @@ body {
 }
 
 
-
 /* ===================== RESPONCIVE CELULAR ===================== */
 @media screen and (max-width: 768px) {
 
@@ -1123,4 +1122,116 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
+}
+
+
+
+
+
+/* ===================== ESTILOS CELULAR PARA INICIO ===================== */
+@media screen and (max-width: 768px) {
+
+    /* Contenedor general */
+    .intro-section, .tipos-musica, .videos-section, .aprendizaje {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Imágenes de introducción y secciones */
+    .intro-images img,
+    .zig-img,
+    .imagen-musical img {
+        width: 90%;
+        max-width: 400px;
+        margin: 10px 0;
+        display: block;
+    }
+
+    /* Contenedores zigzag (Pop, Rock, etc.) */
+    .zigzag .item,
+    .zigzag .item.reverse {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .zigzag .item .texto,
+    .zigzag .item.reverse .texto {
+        order: 2; /* texto debajo de la imagen */
+        margin: 10px 0 0 0;
+    }
+
+    .zigzag .item .zig-img,
+    .zigzag .item.reverse .zig-img {
+        order: 1; /* imagen primero */
+        margin: 0 auto;
+    }
+
+    /* Videos */
+    .videos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-item, .video-box {
+        width: 90%;
+        max-width: 500px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .video-item iframe,
+    .video-box iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .video-item p,
+    .video-box p {
+        margin-top: 8px;
+        font-size: 0.9rem;
+    }
+
+    /* Texto de pop y demás */
+    .categoria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .categoria h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .categoria p {
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+
+    /* Aprendizaje y tips motivadores */
+    .aprendizaje p, .tip-motivador {
+        width: 90%;
+        max-width: 450px;
+        margin: 10px auto;
+    }
+
+    /* Footer centrado */
+    .footer {
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 15px;
+    }
+
+    .footer-menu li {
+        display: block;
+        margin: 5px 0;
+    }
+
 }
