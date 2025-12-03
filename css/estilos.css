@@ -641,10 +641,10 @@ body {
 }
 
 .danza-card {
-    background-color: #0a0a0a; /* Fondo negro intenso */
-    border: 3px solid #5b0000; /* Rojo vino */
+    background-color: #050000; /* Fondo negro intenso */
+    border: 3px solid #f0e111; /* Rojo vino */
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 5px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(7, 0, 0, 0.5), 0 5px 20px rgba(0, 0, 0, 0.6);
     padding: 25px;
     max-width: 320px; 
     text-align: center;
@@ -654,7 +654,7 @@ body {
 /* Hover efecto más brillante */
 .danza-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9), 0 10px 30px rgba(0,0,0,0.7);
+    box-shadow: 0 0 25px rgba(155, 152, 5, 0.9), 0 10px 30px rgba(0,0,0,0.7);
 }
 
 /* Imagen dentro del card */
@@ -662,7 +662,7 @@ body {
     width: 100%;
     border-radius: 12px;
     margin-bottom: 15px;
-    border: 2px solid #5b0000;
+    border: 2px solid #000000;
 }
 
 /* Título del card con efecto glow dorado animado */
@@ -688,14 +688,14 @@ body {
     background-color: #120000; /* fondo rojo oscuro muy sutil */
     padding: 15px;
     border-radius: 12px;
-    border: 2px solid #5b0000;
-    text-shadow: 0 0 3px #ff4d4d, 0 0 6px #ff0000;
+    border: 2px solid #000000;
+    text-shadow: 0 0 3px #e4e714, 0 0 6px #e4eeaf;
     transition: text-shadow 0.5s;
 }
 
 /* Hover efecto glow en descripción */
 .danza-card:hover .danza-desc {
-    text-shadow: 0 0 8px #ff4d4d, 0 0 15px #ff0000;
+    text-shadow: 0 0 8px #fffb01, 0 0 15px #cfb314;
 }
 
 
@@ -802,7 +802,7 @@ body {
     max-width: 800px;
     margin: 20px auto 40px auto; /* Centrado y espacio */
     padding: 25px 30px;
-    background: linear-gradient(135deg, #f7f5f2ea, #181715); /* Degradado dinámico */
+    background: linear-gradient(135deg, #1d1a17ea, #181715); /* Degradado dinámico */
     border-radius: 20px;
     border: 4px solid #000000;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -827,5 +827,218 @@ body {
 .importancia-card p::first-letter {
     font-size: 2rem;
     font-weight: bold;
-    color: #310202;
+    color: #f3e95c;
+}
+
+
+
+
+
+/*modales*/
+.ritmos-lista li {
+    cursor: pointer;
+    padding: 10px;
+    background: #111;
+    border: 2px solid #f0ed3d;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.ritmos-lista li:hover {
+    background: #c5c32b;
+    box-shadow: 0 0 10px #f5f83a;
+}
+
+
+
+/* MODAL DARK GAMER */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background: #0a0a0a;
+    border: 3px solid #a79c0d;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 450px;
+    color: white;
+    box-shadow: 0 0 20px #faf620;
+    animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+    color: #ff3b3b;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+
+
+
+
+
+
+
+/*videos de musica*/
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.video-box {
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.video-desc {
+    opacity: 0;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: opacity 0.4s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.video-box:hover {
+    transform: scale(1.03);
+}
+
+.video-box:hover .video-desc {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === MEDIA QUERIES PARA CELULARES === */
+@media only screen and (max-width: 768px) {
+  
+  /* Contenedor principal */
+  .intro, .contenedor-musica, .danza-container, .videos-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  /* Títulos y texto */
+  h1, h2, h3, h4, p {
+    text-align: center;
+    font-size: 1.1rem; /* Ajusta tamaño de fuente */
+    line-height: 1.5rem;
+  }
+
+  /* Menú */
+  .navbar ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar li {
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  /* Imagenes intro */
+  .intro-images img, .imagenes-musica img, .imagen-musical img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Flex zigzag música */
+  .zigzag .item, .zigzag .item.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .zigzag .zig-img {
+    width: 80%;
+    margin: 0 auto 10px auto;
+  }
+
+  /* Danza flex */
+  .danza-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .danza-flex img {
+    width: 80%;
+    margin: 0 auto 10px auto;
+  }
+
+  /* Videos */
+  .videos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .videos-container iframe {
+    width: 95%;
+    height: 200px; /* Ajuste de altura */
+  }
+
+  .video-box p.video-desc {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-menu li {
+    display: block;
+    margin: 5px 0;
+  }
 }

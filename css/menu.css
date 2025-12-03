@@ -50,3 +50,29 @@
     text-shadow: 0 0 8px yellow;
     background-color: rgba(255,255,255,0.05); /* ligero efecto de fondo */
 }
+
+
+
+
+
+/* Menu responsive */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+
+  .navbar a {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+  }
+}
